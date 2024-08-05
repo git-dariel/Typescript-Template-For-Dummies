@@ -1,3 +1,5 @@
+import { config } from "../config/config";
+
 export const calculate = (numOne: number, numTwo: number, operator: string): string | number => {
   switch (operator) {
     case "+":
@@ -8,11 +10,11 @@ export const calculate = (numOne: number, numTwo: number, operator: string): str
       return numOne * numTwo;
     case "/":
       if (numTwo === 0) {
-        return "Cannot divide by zero.";
+        return config.ERROR.CANNOT_DIVIDE_BY_ZERO;
       } else {
         return numOne / numTwo;
       }
     default:
-      return "Unexpected error occurred.";
+      return config.ERROR.UNEXPECTED;
   }
 };

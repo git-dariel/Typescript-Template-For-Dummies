@@ -1,30 +1,31 @@
-import { askQuestion, closeInput } from "./config/inputHandler";
-import { validateNumber, validateOperator } from "./config/validate";
-import { calculate } from "./config/calculate";
+import { askQuestion, closeInput } from "./helper/inputHandler";
+import { validateNumber, validateOperator } from "./helper/validate";
+import { calculate } from "./services/calculate";
+import { config } from "./config/config";
 
 const main = async () => {
   try {
-    console.log("Welcome to the CLI calculator!\n");
+    console.log(config.WELCOME);
 
-    const numOne = await askQuestion("Enter the first number: ");
+    const numOne = await askQuestion(config.ASKQUESTIONS.FIRSTNUMBER);
     const numOneValue = validateNumber(numOne);
     if (numOneValue === null) {
-      console.log("Invalid input. Please enter a number.");
+      console.log(config.ERROR.INVALIDNUMBER);
       closeInput();
       return;
     }
 
-    const numTwo = await askQuestion("Enter the second number: ");
+    const numTwo = await askQuestion(config.ASKQUESTIONS.SECONDNUMBER);
     const numTwoValue = validateNumber(numTwo);
     if (numTwoValue === null) {
-      console.log("Invalid input. Please enter a number.");
+      console.log(config.ERROR.INVALIDNUMBER);
       closeInput();
       return;
     }
 
-    const operator = await askQuestion("Enter the operator (+, -, *, /): ");
+    const operator = await askQuestion(config.ASKQUESTIONS.OPERATOR);
     if (!validateOperator(operator)) {
-      console.log("Invalid input. Please enter a valid operator.");
+      console.log(config.ERROR.INVALIDOPERATOR);
       closeInput();
       return;
     }

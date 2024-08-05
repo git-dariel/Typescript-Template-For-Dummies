@@ -1,4 +1,4 @@
-import rl from "./readlineConfig";
+import rl from "../config/readlineConfig";
 
 export const askQuestion = (query: string): Promise<string> => {
   return new Promise((resolve) => {
