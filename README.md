@@ -1,4 +1,4 @@
-#Typescript Practice Template
+# Typescript Practice Template
 
 Libraries Used:
 
