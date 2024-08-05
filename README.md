@@ -5,7 +5,7 @@ Welcome to the Typescript Template for Dummies documentation
 ## Setup
 
 1.  Clone the repository
-    `git clone https://github.com/git-dariel/Typescript-Template.git`
+    `git clone https://github.com/git-dariel/Typescript-Template-For-Dummies.git`
 2.  Install dependencies
     `npm install`
 3.  Run local server
