@@ -1,6 +1,6 @@
-# Typescript Template
+# Typescript Template for Dummies
 
-Welcome to the Typescript Template documentation
+Welcome to the Typescript Template for Dummies documentation
 
 ## Setup
 
